@@ -1,4 +1,5 @@
-
+### Copyright Fabian L. Blank
+### All rights reserved
 
 import sys
 import Adafruit_DHT
