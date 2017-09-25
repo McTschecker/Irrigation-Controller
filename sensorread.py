@@ -5,8 +5,7 @@ import Adafruit_DHT
 import Numpy as np
 
 numOfReads = 10 # Numbers of sensor readings
-#increase nom of reads by one to get it running the specific times
-numOfReads = numOfReads +1
+
 
 def readDHT(PinDHT, DHT_TYPE=Adafruit_DHT.DHT.22): #sensorargs = DHT TYPE
 	sensor = DHT_TYPE
