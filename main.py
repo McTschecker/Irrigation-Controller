@@ -1,13 +1,15 @@
 ### Copyright Fabian L. Blank
 ### All rights reserved
-from sensorread import readDHT
+from sensorread import readDHT, readmoisture
 from updatevalues import update
 def main():
 	while True:
 		hum, temp = readDHT()
+		moisture = readmoisture()
 		print("#################################")
 		print("humidity is ", hum)
 		print("temperature is", temp)
-		update(temperature, humidity)
+		print("moisture is", moisture)
+		update(temperature, humidity, moisture)
 
 main()
