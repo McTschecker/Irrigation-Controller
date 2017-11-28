@@ -4,7 +4,6 @@ RUN  apt-get install build-essential python-dev git wget python3-spidev python-s
 RUN wget https://bootstrap.pypa.io/get-pip.py
 RUN python get-pip.py
 RUN pip install GPIO 
-RUN pip install math
 RUN git clone https://github.com/adafruit/Adafruit_Python_DHT.git
 RUN cd Adafruit_Python_DHT && python setup.py install --force-pi
 RUN ls
