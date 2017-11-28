@@ -8,4 +8,4 @@ RUN git clone https://github.com/adafruit/Adafruit_Python_DHT.git
 RUN cd Adafruit_Python_DHT && python setup.py install --force-pi
 RUN ls
 #CMD ["python", "main.py"]
-CMD ["ls"]
+CMD ["find","main.py&& ","ls"]
