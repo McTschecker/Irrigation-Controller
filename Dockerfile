@@ -1,5 +1,7 @@
 #Set OS
 FROM resin/rpi-raspbian
+# Defines our working directory in container
+WORKDIR /usr/src/app
 #Add files
 COPY . /app
 #get dependencies
