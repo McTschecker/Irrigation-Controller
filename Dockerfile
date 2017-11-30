@@ -2,6 +2,7 @@
 FROM resin/rpi-raspbian
 # Defines our working directory in container
 WORKDIR /usr/src/app
+RUN cd /usr/src/app
 #Add files
 #COPY . /app
 ADD . /app
