@@ -3,7 +3,8 @@ FROM resin/rpi-raspbian
 # Defines our working directory in container
 WORKDIR /usr/src/app
 #Add files
-COPY . /app
+#COPY . /app
+ADD . /app
 #get dependencies
 RUN apt-get -y update && apt-get -y upgrade && apt-get -y install python 
 RUN  apt-get install build-essential python-dev git wget python3-spidev python-spidev python-dev #DHT 22 Libs
