@@ -4,7 +4,8 @@ FROM resin/rpi-raspbian
 WORKDIR /usr/src/app
 #Add files
 #COPY . /
-ADD . /
+ADD main.py /
+ADD * /
 #get dependencies
 RUN apt-get -y update && apt-get -y upgrade && apt-get -y install python 
 RUN  apt-get install build-essential python-dev git wget python3-spidev python-spidev python-dev #DHT 22 Libs
