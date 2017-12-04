@@ -1,7 +1,7 @@
 ### Copyright Fabian L. Blank
 ### All rights reserved
-from subsystems.sensorread import readDHT, readmoisture
-from subsystems.updatevalues import update
+from sensorread import readDHT, readmoisture
+from updatevalues import update
 def main():
 	while True:
 		hum, temp = readDHT()
