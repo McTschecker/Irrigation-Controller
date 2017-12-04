@@ -1,5 +1,7 @@
 ### Copyright Fabian L. Blank
 ### All rights reserved
+import Adafruit_DHT
+print (Adafruit_DHT.DHT.22)
 from sensorread import readDHT, readmoisture
 from updatevalues import update
 def main():
