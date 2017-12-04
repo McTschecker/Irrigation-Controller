@@ -35,3 +35,4 @@ def readDHT (PinDHT):
 	humidity = a.mean(humidA)
 	temperature = s.mean(tempA)
 	return humidity, temperature
+
