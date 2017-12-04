@@ -14,13 +14,13 @@ def readmoisture():
 	print(pot.value)
 	moistureA = [pot.value]
 	for h in range(numOfReads):
-    	print("soil moisture", pot.value)
-    	moistureA = moistureA +  [pot.value]
-    moisture = s.mean(moistureA)
-    print("average moisture", moisture)
+		print("soil moisture", pot.value)
+		moistureA = moistureA +  [pot.value]
+	moisture = s.mean(moistureA)
+	print("average moisture", moisture)
 	return moisture
 
-	
+
 def readDHT(PinDHT, DHT_TYPE=Adafruit_DHT.DHT.22): #sensorargs = DHT TYPE
 	sensor = DHT_TYPE
 
