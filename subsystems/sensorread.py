@@ -21,7 +21,8 @@ def readmoisture():
 	return moisture
 
 
-def readDHT(PinDHT, DHT_TYPE=Adafruit_DHT.DHT.22): #sensorargs = DHT TYPE
+def readDHT (PinDHT, DHT_TYPE=Adafruit_DHT.DHT.22): 
+	#sensorargs = DHT TYPE
 	sensor = DHT_TYPE
 
 	humidity, temperature = Adafruit_DHT.read_retry(sensor, pin)
