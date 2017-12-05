@@ -3,7 +3,6 @@
 
 import sys
 import Adafruit_DHT
-import Numpy as np
 from gpiozero import MCP3008
 import statistics as s
 
