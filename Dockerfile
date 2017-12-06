@@ -15,9 +15,8 @@ RUN  apt-get install build-essential python-dev git wget python3-spidev python-s
 RUN sudo apt install python3-gpiozero python-dev 
 RUN wget https://bootstrap.pypa.io/get-pip.py
 RUN python get-pip.py
-RUN pip install RPi.Gpio
 RUN git clone https://github.com/adafruit/Adafruit_Python_DHT.git
 RUN cd Adafruit_Python_DHT && python setup.py install --force-pi
 ENV INITSYSTEM on
 #Run it
-CMD ["python", "main.py"]
+CMD ["run.sh"]
