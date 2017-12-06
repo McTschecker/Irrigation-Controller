@@ -12,7 +12,7 @@ RUN apt-get -y update && apt-get -y upgrade && apt-get -y install python apt-uti
 #DHT 22 Libs
 RUN  apt-get install build-essential python-dev git wget python3-spidev python-spidev python-dev 
 #gpio zero
-RUN sudo apt install python3-gpiozero python-dev 
+RUN sudo apt-get install python3-gpiozero python-dev 
 RUN wget https://bootstrap.pypa.io/get-pip.py
 RUN python get-pip.py
 RUN git clone https://github.com/adafruit/Adafruit_Python_DHT.git
