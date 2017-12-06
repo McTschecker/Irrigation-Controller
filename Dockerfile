@@ -6,6 +6,7 @@ WORKDIR /usr/src/app
 #COPY . /
 ADD main.py /usr/src/app/
 ADD subsystems/ /usr/src/app/
+ADD run.sh /usr/src/app/
 ADD . /usr/src/app/
 #get dependencies
 RUN apt-get -y update && apt-get -y upgrade && apt-get -y install python apt-utils
