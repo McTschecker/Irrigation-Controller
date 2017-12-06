@@ -19,4 +19,5 @@ RUN git clone https://github.com/adafruit/Adafruit_Python_DHT.git
 RUN cd Adafruit_Python_DHT && python setup.py install --force-pi
 ENV INITSYSTEM on
 #Run it
+CMD ["ls"]
 CMD ["run.sh"]
