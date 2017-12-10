@@ -21,4 +21,4 @@ RUN cd Adafruit_Python_DHT && python setup.py install --force-pi
 ENV INITSYSTEM on
 #Run it
 #CMD ["ls"]
-CMD ["sudo ./run.sh"]
+CMD ["sudo exec run.sh"]
