@@ -15,6 +15,7 @@ RUN  apt-get install build-essential python-dev git wget python3-spidev python-s
 #gpio zero
 RUN sudo apt-get install  python-dev 
 RUN sudo apt-get install python-rpi.gpio python3-rpi.gpio
+#pip
 RUN wget https://bootstrap.pypa.io/get-pip.py
 RUN python get-pip.py
 RUN pip install RPi.Gpio
