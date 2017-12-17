@@ -4,7 +4,6 @@ FROM resin/rpi-raspbian
 WORKDIR /usr/src/app
 ENV INITSYSTEM on
 #Add files
-#COPY . /
 ADD main.py /usr/src/app/
 ADD subsystems/ /usr/src/app/
 ADD run.sh /usr/src/app/
@@ -21,7 +20,6 @@ RUN python get-pip.py
 RUN pip install gpiozero
 RUN git clone https://github.com/adafruit/Adafruit_Python_DHT.git
 RUN cd Adafruit_Python_DHT && python setup.py install --force-pi
-
 #Run it
 #CMD ["ls"]
 #CMD ["sudo exec run.sh"]
