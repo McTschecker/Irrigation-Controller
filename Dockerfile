@@ -18,6 +18,7 @@ RUN sudo apt-get install  python-dev
 #pip
 RUN wget https://bootstrap.pypa.io/get-pip.py
 RUN python get-pip.py
+RUN rm get-pip.py
 #gpio
 RUN pip install gpiozero
 #Request
