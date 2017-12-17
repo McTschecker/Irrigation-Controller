@@ -9,4 +9,5 @@ def testUpdateValues():
     update(temperature, humidity, moisture, channel_id, write_key)
     print("Succesfully put some values to thingspeak")
 
+#run the test for updates
 testUpdateValues()
