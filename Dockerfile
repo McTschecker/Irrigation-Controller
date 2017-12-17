@@ -17,7 +17,10 @@ RUN sudo apt-get install  python-dev
 #pip
 RUN wget https://bootstrap.pypa.io/get-pip.py
 RUN python get-pip.py
+#gpio
 RUN pip install gpiozero
+#statistics
+RUN pip install statistics
 RUN git clone https://github.com/adafruit/Adafruit_Python_DHT.git
 RUN cd Adafruit_Python_DHT && python setup.py install --force-pi
 #Run it
