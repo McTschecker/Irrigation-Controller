@@ -1,5 +1,5 @@
 from updatevalues import update
-import random
+import os
 def testUpdateValues():
     temperature = 1000
     humidity = -10
