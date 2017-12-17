@@ -24,7 +24,6 @@ RUN pip install gpiozero
 RUN pip install statistics
 RUN git clone https://github.com/adafruit/Adafruit_Python_DHT.git
 RUN cd Adafruit_Python_DHT && python setup.py install --force-pi
-RUN ls
 RUN python testSubFunctions.py
 #Run it
 #CMD ["ls"]
