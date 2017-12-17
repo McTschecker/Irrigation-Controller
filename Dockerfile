@@ -2,6 +2,7 @@
 FROM resin/rpi-raspbian
 # Defines our working directory in container
 WORKDIR /usr/src/app
+ENV INITSYSTEM on
 #Add files
 #COPY . /
 ADD main.py /usr/src/app/
@@ -21,7 +22,7 @@ RUN python get-pip.py
 RUN pip install RPi.Gpio
 RUN git clone https://github.com/adafruit/Adafruit_Python_DHT.git
 RUN cd Adafruit_Python_DHT && python setup.py install --force-pi
-ENV INITSYSTEM on
+
 #Run it
 #CMD ["ls"]
 #CMD ["sudo exec run.sh"]
