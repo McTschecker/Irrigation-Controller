@@ -1,9 +1,10 @@
 from updatevalues import update
-import os
+import random
+
 def testUpdateValues():
-    temperature = os.urandom(2)
-    humidity = os.urandom(6)
-    moisture = os.random(256)
+    temperature = random.randint(0,500)
+    humidity = random.randint(0,100)
+    moisture = random.randint(0,10000)
     write_key = "ENZIKF2E2KS08KD4"
     channel_id = 386549
     update(temperature, humidity, moisture, channel_id, write_key)
