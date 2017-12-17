@@ -20,6 +20,8 @@ RUN wget https://bootstrap.pypa.io/get-pip.py
 RUN python get-pip.py
 #gpio
 RUN pip install gpiozero
+#Request
+RUN pip install requests
 #statistics
 RUN pip install statistics
 RUN git clone https://github.com/adafruit/Adafruit_Python_DHT.git
