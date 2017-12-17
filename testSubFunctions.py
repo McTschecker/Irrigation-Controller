@@ -1,9 +1,9 @@
 from updatevalues import update
 import os
 def testUpdateValues():
-    temperature = 1000
-    humidity = -10
-    moisture = 100000
+    temperature = os.urandom(2)
+    humidity = os.urandom(6)
+    moisture = os.random(256)
     write_key = "ENZIKF2E2KS08KD4"
     channel_id = 386549
     update(temperature, humidity, moisture, channel_id, write_key)
