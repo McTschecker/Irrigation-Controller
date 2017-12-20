@@ -6,7 +6,6 @@ ENV INITSYSTEM on
 #Add files
 ADD main.py /usr/src/app/
 ADD subsystems/ /usr/src/app/
-ADD run.sh /usr/src/app/
 ADD testSubFunctions.py /usr/src/app/
 ADD . /usr/src/app/
 #get dependencies
