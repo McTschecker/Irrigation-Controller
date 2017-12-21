@@ -24,6 +24,15 @@ RUN pip install gpiozero
 RUN pip install requests
 #rpio
 RUN pip install rpio pigpio
+
+#pigpiod
+RUN wget abyz.co.uk/rpi/pigpio/pigpio.zip
+RUN unzip pigpio.zip
+RUN cd PIGPIO
+RUN make
+RUN make install
+RUN cd ..
+
 #statistics
 RUN pip install statistics
 RUN git clone https://github.com/adafruit/Adafruit_Python_DHT.git
