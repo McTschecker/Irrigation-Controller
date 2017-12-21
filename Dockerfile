@@ -4,10 +4,7 @@ FROM resin/rpi-raspbian
 WORKDIR /usr/src/app
 ENV INITSYSTEM on
 #Add files
-ADD main.py /usr/src/app/
-ADD subsystems/ /usr/src/app/
 ADD testSubFunctions.py /usr/src/app/
-ADD . /usr/src/app/
 #get dependencies
 RUN apt-get -y update && apt-get -y upgrade && apt-get -y install python apt-utils
 #DHT 22 Libs
@@ -30,7 +27,11 @@ RUN python testSubFunctions.py
 RUN export PIGPIO_ADDR=soft
 RUN export PIGPIO_PORT=8888
 RUN pigpiod
+#Add files
+ADD . /usr/src/app/Adafruit_Python_DHT/examples
+ADD main.py /usr/src/app/Adafruit_Python_DHT/examples
+ADD subsystems/ /usr/src/app/Adafruit_Python_DHT/examples
 #Run it
 #CMD ["ls"]
 #CMD ["sudo exec run.sh"]
-CMD ["python", "main.py"]
+CMD ["python", "Adafruit_Python_DHT/examples/main.py"]
