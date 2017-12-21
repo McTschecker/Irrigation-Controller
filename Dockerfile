@@ -31,7 +31,7 @@ RUN cd Adafruit_Python_DHT && python setup.py install --force-pi
 #test sub functions
 RUN python testSubFunctions.py
 #pigpiod deamon start
-RUN pigpiod
+#RUN pigpiod
 #Run it
 #CMD ["ls"]
 #CMD ["sudo exec run.sh"]
