@@ -6,7 +6,7 @@ channel_id = "337034"
 write_key  = "PDCMJ7FI8E3GRKS5"
 def main():
 	while True:
-		hum, temp = readDHT(22)
+		hum, temp = readDHT(2)
 		moisture = readmoisture()
 		print("#################################")
 		print("humidity is ", hum)
