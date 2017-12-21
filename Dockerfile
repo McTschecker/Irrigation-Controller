@@ -22,7 +22,7 @@ RUN rm get-pip.py
 RUN pip install gpiozero
 #Request
 RUN pip install requests
-RUN pip install rpio rpgpio
+RUN pip install rpio
 #statistics
 RUN pip install statistics
 RUN git clone https://github.com/adafruit/Adafruit_Python_DHT.git
