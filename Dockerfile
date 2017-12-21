@@ -22,6 +22,7 @@ RUN rm get-pip.py
 RUN pip install gpiozero
 #Request
 RUN pip install requests
+#rpio
 RUN pip install rpio
 #statistics
 RUN pip install statistics
