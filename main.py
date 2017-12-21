@@ -2,6 +2,9 @@
 ### All rights reserved
 from sensorread import readDHT, readmoisture
 from updatevalues import update
+import pigpio
+
+pigpio.start()
 channel_id = "337034"
 write_key  = "PDCMJ7FI8E3GRKS5"
 def main():
