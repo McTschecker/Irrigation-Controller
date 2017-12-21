@@ -30,6 +30,7 @@ RUN git clone https://github.com/adafruit/Adafruit_Python_DHT.git
 RUN cd Adafruit_Python_DHT && python setup.py install --force-pi
 #test sub functions
 RUN python testSubFunctions.py
+#pigpiod deamon start
 RUN pigpiod
 #Run it
 #CMD ["ls"]
