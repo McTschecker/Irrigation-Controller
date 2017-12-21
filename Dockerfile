@@ -23,7 +23,7 @@ RUN pip install gpiozero
 #Request
 RUN pip install requests
 #rpio
-RUN pip install rpio
+RUN pip install rpio pigpio
 #statistics
 RUN pip install statistics
 RUN git clone https://github.com/adafruit/Adafruit_Python_DHT.git
