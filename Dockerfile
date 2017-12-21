@@ -33,6 +33,8 @@ RUN cd Adafruit_Python_DHT && python setup.py install --force-pi
 #test sub functions
 RUN python testSubFunctions.py
 #pigpiod deamon start
+RUN export PIGPIO_ADDR=soft
+RUN export PIGPIO_PORT=8888
 RUN pigpiod
 #Run it
 #CMD ["ls"]
