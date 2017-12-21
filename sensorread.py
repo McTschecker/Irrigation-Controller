@@ -5,6 +5,7 @@ import sys
 import Adafruit_DHT
 from gpiozero import MCP3008
 import statistics as s
+import RPi.GPIO as GPIO
 
 numOfReads = 10 # Numbers of sensor readings
 
