@@ -15,7 +15,6 @@ RUN  apt-get install build-essential python-dev git wget python3-spidev python-s
 #gpio zero
 RUN sudo apt-get install  python-dev 
 #pip
-RUN o
 RUN python get-pip.py
 RUN rm get-pip.py
 #gpio
