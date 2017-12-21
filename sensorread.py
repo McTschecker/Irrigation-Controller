@@ -20,7 +20,7 @@ def readmoisture():
 	return moisture
 
 
-def readDHT (PinDHT): 
+def readDHT (pin): 
 	#sensorargs = DHT TYPE
 	sensor = Adafruit_DHT.DHT22
 
