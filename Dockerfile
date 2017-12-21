@@ -13,7 +13,7 @@ RUN apt-get -y update && apt-get -y upgrade && apt-get -y install python apt-uti
 #DHT 22 Libs
 RUN  apt-get install build-essential python-dev git wget python3-spidev python-spidev python-dev 
 #gpio zero
-RUN sudo apt-get install  python-dev 
+RUN sudo apt-get install  python-dev unzip
 #pip
 RUN wget https://bootstrap.pypa.io/get-pip.py
 RUN python get-pip.py
