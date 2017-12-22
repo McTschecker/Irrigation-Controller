@@ -1,6 +1,7 @@
 before_install:
   - openssl aes-256-cbc -K $encrypted_ddb69df631e0_key -iv $encrypted_ddb69df631e0_iv -in id.enc -out id -d
-install: pip install --user -r requirements.txt
+install: 
+  - pip install --user -r requirements.txt
 language: python
 python:
     - "3.6"
