@@ -13,5 +13,7 @@ after_success:
 - ssh-add .travis/id
 - ssh -o "StrictHostKeyChecking no" g_fabian_lukas_blank@git.resin.io
 - git remote add resin g_fabian_lukas_blank@git.resin.io:g_fabian_lukas_blank/control.git
+- git checkout master
+- git merge dev
 - git push -u origin master 
 - git push resin master
