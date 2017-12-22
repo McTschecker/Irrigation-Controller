@@ -21,8 +21,6 @@ RUN rm get-pip.py
 RUN pip install -r requirements.txt
 RUN git clone https://github.com/adafruit/Adafruit_Python_DHT.git
 RUN cd Adafruit_Python_DHT && python setup.py install --force-pi
-#test sub functions
-RUN python testSubFunctions.py
 #pigpiod deamon start
 RUN export PIGPIO_ADDR=soft
 RUN export PIGPIO_PORT=8888
