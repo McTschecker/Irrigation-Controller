@@ -18,7 +18,7 @@ RUN wget https://bootstrap.pypa.io/get-pip.py
 RUN python get-pip.py
 RUN rm get-pip.py
 #install requirements.txt
-RUN pip install -r requirements.txt
+RUN pip install requests gpiozero statistics rpio pigpio RPi.Gpio
 RUN git clone https://github.com/adafruit/Adafruit_Python_DHT.git
 RUN cd Adafruit_Python_DHT && python setup.py install --force-pi
 #pigpiod deamon start
