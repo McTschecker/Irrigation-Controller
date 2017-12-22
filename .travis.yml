@@ -5,7 +5,7 @@ language: python
 python:
 - '3.6'
 script:
-- testSubFunctions.py
+- python testSubFunctions.py
 after_success:
 - eval "$(ssh-agent -s)"
 - chmod 600 .travis/id
