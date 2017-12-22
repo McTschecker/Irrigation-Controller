@@ -1,0 +1,3 @@
+before_install:
+- openssl aes-256-cbc -K $encrypted_ddb69df631e0_key -iv $encrypted_ddb69df631e0_iv
+  -in id.enc -out c:\\Users\\fabia\\Desktop\\id -d
