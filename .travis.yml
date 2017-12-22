@@ -3,7 +3,7 @@ before_install:
   -in id.enc -out id -d
 install: pip install --user -r requirements.txt
 language: python
-  python:
+python:
     - "3.6"
   script:
     - testSubFunctions.py
