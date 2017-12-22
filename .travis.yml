@@ -11,4 +11,5 @@ after_success:
 - chmod 600 .travis/id
 - ssh-add .travis/id
 - git remote add resin g_fabian_lukas_blank@git.resin.io:g_fabian_lukas_blank/control.git
+- git push -u origin master 
 - git push resin master
