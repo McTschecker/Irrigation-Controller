@@ -22,7 +22,7 @@ RUN pip install requests gpiozero statistics rpio pigpio RPi.Gpio
 #DHT22
 #RUN git clone https://github.com/adafruit/Adafruit_Python_DHT.git
 #RUN cd Adafruit_Python_DHT && python setup.py install --force-pi
-RUN pip install Adafruit_Python_DHT==1.1.2
+#RUN pip install Adafruit_Python_DHT==1.1.2
 #pigpiod deamon start
 RUN export PIGPIO_ADDR=soft
 RUN export PIGPIO_PORT=8888
@@ -32,4 +32,4 @@ ADD . /usr/src/app/Adafruit_Python_DHT/
 ADD main.py /usr/src/app/
 ADD subsystems/ /usr/src/app/
 #Run it
-CMD ["python", "main.py"]
+CMD ["./run.sh"]
