@@ -31,5 +31,6 @@ RUN pigpiod
 ADD . /usr/src/app/
 ADD main.py /usr/src/app/
 ADD subsystems/ /usr/src/app/
+RUN chmod +x run.sh
 #Run it
 CMD ["./run.sh"]
