@@ -1,6 +1,6 @@
 ### Copyright Fabian L. Blank
 ### All rights reserved
-from sensorread import readDHT, readmoisture
+from sensorread import readDHT, readMoisture
 from updatevalues import update
 import pigpio
 
