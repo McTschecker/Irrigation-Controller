@@ -1,7 +1,5 @@
 #Set OS
 FROM resin/rpi-raspbian
-#fix for 1wire Temperature sensors
-#RUN modprobe w1-gpio && modprobe w1-therm
 # Defines our working directory in container
 WORKDIR /usr/src/app
 ENV INITSYSTEM on
