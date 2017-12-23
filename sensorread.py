@@ -10,16 +10,19 @@ import statistics
 
 numOfReads = 10 # Numbers of sensor readings
 
-def readmoisture():
-	pot = MCP3008(0)
-	print(pot.value)
-	moistureA = [pot.value]
-	for h in range(numOfReads):
-		print("soil moisture", pot.value)
-		moistureA = moistureA +  [pot.value]
-	moisture = s.mean(moistureA)
-	print("average moisture", moisture)
-	return moisture
+def readMoisture():
+
+	# Set our GPIO numbering to BCM
+	GPIO.setmode(GPIO.BCM)
+
+	# Define the GPIO pin that we have our digital output from our sensor connected to
+	channel = 17
+	# Set the GPIO pin to an input
+	GPIO.setup(channel, GPIO.IN)
+	SensorValue = GPIO.input(channel)
+	print(SensorValue)
+	return 0
+
 
 
 def readDHT (pin): 
@@ -30,7 +33,10 @@ def readDHT (pin):
 	humidA = [humidity]
 	tempA = [temperature]
 	for i in range(numOfReads):
+		print("reading Temperature", i + 1)
 		humidity, temperature = Adafruit_DHT.read_retry(sensor, pin)
+		print("Humidity is:", humidity)
+		print("Temperature is", temperature)
 		humidA = humidA + [humidity]
 		tempA = tempA + [temperature]
 	humidity = statistics.mean(humidA)
