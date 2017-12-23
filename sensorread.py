@@ -10,6 +10,7 @@ import statistics
 
 numOfReads = 10 # Numbers of sensor readings
 
+<<<<<<< HEAD
 def readMoisture():
 # a part of this code is by modmypi https://github.com/modmypi/Moisture-Sensor/blob/master/moisture.py
 	GPIO.setup(channel, GPIO.IN)
@@ -38,6 +39,18 @@ def callback(channel):
 		print "LED on"
 		sendEmail(message_alive)
 
+=======
+def readmoisture():
+	pot = MCP3008(0)
+	print(pot.value)
+	moistureA = [pot.value]
+	for h in range(numOfReads):
+		print("soil moisture", pot.value)
+		moistureA = moistureA +  [pot.value]
+	moisture = s.mean(moistureA)
+	print("average moisture", moisture)
+	return moisture
+>>>>>>> parent of d577a5c... add support for temperature sensor
 
 
 def readDHT (pin): 
@@ -48,10 +61,7 @@ def readDHT (pin):
 	humidA = [humidity]
 	tempA = [temperature]
 	for i in range(numOfReads):
-		print("reading Temperature", i + 1)
 		humidity, temperature = Adafruit_DHT.read_retry(sensor, pin)
-		print("Humidity is:", humidity)
-		print("Temperature is", temperature)
 		humidA = humidA + [humidity]
 		tempA = tempA + [temperature]
 	humidity = statistics.mean(humidA)
