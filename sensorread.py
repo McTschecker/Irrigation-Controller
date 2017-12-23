@@ -12,7 +12,7 @@ numOfReads = 10 # Numbers of sensor readings
 
 def readMoisture():
 # a part of this code is by modmypi https://github.com/modmypi/Moisture-Sensor/blob/master/moisture.py
-
+	GPIO.setmode(GPIO.BCM)
 	# Define the GPIO pin that we have our digital output from our sensor connected to
 	channel = 3
 	# Set the GPIO pin to an input
