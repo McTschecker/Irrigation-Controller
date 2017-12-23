@@ -15,6 +15,6 @@ def main():
 		print("humidity is ", hum)
 		print("temperature is", temp)
 		print("moisture is", moisture)
-		update(temperature, humidity, moisture, channel_id, write_key)
+		update(temp, hum, moisture, channel_id, write_key)
 
 main()
