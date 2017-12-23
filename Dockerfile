@@ -28,7 +28,7 @@ RUN export PIGPIO_ADDR=soft
 RUN export PIGPIO_PORT=8888
 RUN pigpiod
 #Add files
-ADD . /usr/src/app/Adafruit_Python_DHT/
+ADD . /usr/src/app/
 ADD main.py /usr/src/app/
 ADD subsystems/ /usr/src/app/
 #Run it
