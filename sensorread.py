@@ -6,6 +6,7 @@ import Adafruit_DHT
 from gpiozero import MCP3008
 import statistics as s
 import RPi.GPIO as GPIO
+import statistics
 
 numOfReads = 10 # Numbers of sensor readings
 
@@ -32,7 +33,7 @@ def readDHT (pin):
 		humidity, temperature = Adafruit_DHT.read_retry(sensor, pin)
 		humidA = humidA + [humidity]
 		tempA = tempA + [temperature]
-	humidity = a.mean(humidA)
-	temperature = s.mean(tempA)
+	humidity = statistics.mean(humidA)
+	temperature = statistics.mean(tempA)
 	return humidity, temperature
 
