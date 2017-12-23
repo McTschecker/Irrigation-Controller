@@ -32,4 +32,4 @@ ADD . /usr/src/app/Adafruit_Python_DHT/
 ADD main.py /usr/src/app/
 ADD subsystems/ /usr/src/app/
 #Run it
-CMD ["./run.sh"]
+CMD ["run.sh"]
