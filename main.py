@@ -10,7 +10,7 @@ write_key  = "PDCMJ7FI8E3GRKS5"
 def main():
 	while True:
 		hum, temp = readDHT(2)
-		moisture = readmoisture()
+		moisture = readMoisture()
 		print("#################################")
 		print("humidity is ", hum)
 		print("temperature is", temp)
