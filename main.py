@@ -17,6 +17,8 @@ def main():
 		print("temperature is", temp)
 		print("moisture is", moisture)
 		update(temp, hum, moisture, channel_id, write_key)
+		#delay
+		print("Waiting", waitingTime, 'Seconds')
 		time.sleep(waitingTime)
 
 main()
