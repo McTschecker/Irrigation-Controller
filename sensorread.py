@@ -16,7 +16,7 @@ def readMoisture():
 	moistureA = [pot.value]
 	for h in range(numOfReads):
 	#while True:
-		print("soil moisture", pot.value)
+		#print("soil moisture", pot.value)
 		moistureA = moistureA +  [pot.value]
 	moisture = s.mean(moistureA)
 	print("average moisture", moisture)
