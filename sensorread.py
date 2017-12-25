@@ -11,7 +11,7 @@ import statistics
 numOfReads = 10 # Numbers of sensor readings
 
 def readMoisture():
-	pot = MCP3008(3)
+	pot = MCP3008(0)
 	print(pot.value)
 	moistureA = [pot.value]
 	for h in range(numOfReads):
