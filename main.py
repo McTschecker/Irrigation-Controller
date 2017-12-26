@@ -4,6 +4,7 @@ from sensorread import readDHT, readMoisture
 from updatevalues import update
 import pigpio
 import time
+from watering import shouldWater
 waitingTime = 60 #Time waiting in seconds
 #pigpio.start('soft', 8888)
 channel_id = "337034"
@@ -17,6 +18,7 @@ def main():
 		print("temperature is", temp)
 		print("moisture is", moisture)
 		update(temp, hum, moisture, channel_id, write_key)
+		shouldWater(moisture)
 		#delay
 		print("Waiting", waitingTime, 'Seconds')
 		time.sleep(waitingTime)
