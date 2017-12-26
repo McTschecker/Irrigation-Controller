@@ -5,17 +5,17 @@ def shouldWater(moisture, mode=1):
     if mode==1:
         if moisture>= moisMode1:
             water(waterTime)
-            return true
+            return True
         else:
             print("Watering not neccesary")
-            return false
+            return False
     elif mode== 2:
         if moisture>= moisMode2:
             water(waterTime)
-            return true
+            return True
         else:
             print("Watering not neccesary")
-            return false
+            return False
     else:
         raise exeption("Unknown Mode, please select an configured mode!")
 
