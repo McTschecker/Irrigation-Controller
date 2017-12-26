@@ -40,3 +40,4 @@ def testWatering():
         print("Test 4 passed for watering")
 #run the test for updates
 testUpdateValues()
+testWatering()
