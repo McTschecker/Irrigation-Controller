@@ -1,5 +1,5 @@
-moisMode1 = 0.75 ###example Values
-moisMode2 = 0.8  ####example Values
+moisMode1 = 0.5 ###example Values
+moisMode2 = 0.75  ####example Values
 waterTime = 10
 def shouldWater(moisture, mode=1):
     if mode==1:
