@@ -27,13 +27,13 @@ def testWatering():
     ###mode 2
     print("Now testing mode 2")
     #Test3 mode 2; value 0.4  ====> True
-    test1 = shouldWater(0.4) 
+    test1 = shouldWater(0.4, mode=2) 
     if test1:
         print("Test 1 passed for watering")
     else:
         raise exeption ("Test 3 failed for vlue of 0.4, should be true in mode 2", test1)
     #Test2 mode 2; value 0.9  ====> False
-    test4 = shouldWater(0.9)
+    test4 = shouldWater(0.9,mode=2)
     if test2:
          raise exeption ("Test 1 failed for vlue of 0.0, should be false in mode 2", test2)
     else: 
