@@ -16,11 +16,11 @@ def testWatering():
     if test1:
         print("Test 1 passed for watering")
     else:
-        raise exeption ("Test 1 failed for vlue of 0.49, should be true in mode 1", test1)
+        raise Exception ("Test 1 failed for vlue of 0.49, should be true in mode 1", test1)
     #Test2 mode 1; value 0.6  ====> False
     test2 = shouldWater(0.6)
     if test2:
-         raise exeption ("Test 1 failed for vlue of 0.6, should be false in mode 1", test2)
+         raise Exception ("Test 1 failed for vlue of 0.6, should be false in mode 1", test2)
     else: 
         print("Test 2 passed for watering")
     ###############################################################
@@ -31,11 +31,11 @@ def testWatering():
     if test1:
         print("Test 1 passed for watering")
     else:
-        raise exeption ("Test 3 failed for vlue of 0.4, should be true in mode 2", test1)
+        raise Exception ("Test 3 failed for vlue of 0.4, should be true in mode 2", test1)
     #Test2 mode 2; value 0.9  ====> False
     test4 = shouldWater(0.9,mode=2)
     if test2:
-         raise exeption ("Test 1 failed for vlue of 0.0, should be false in mode 2", test2)
+         raise Exception ("Test 1 failed for vlue of 0.0, should be false in mode 2", test2)
     else: 
         print("Test 4 passed for watering")
 #run the test for updates
