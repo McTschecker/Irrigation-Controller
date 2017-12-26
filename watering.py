@@ -1,6 +1,6 @@
-global moisMode1 = 0.75 ###example Values
-global moisMode2 = 0.8  ####example Values
-global waterTime = 10
+moisMode1 = 0.75 ###example Values
+moisMode2 = 0.8  ####example Values
+waterTime = 10
 def shouldWater(mode=1,moisture):
     if mode==1:
         if moisture>= moisMode1:
