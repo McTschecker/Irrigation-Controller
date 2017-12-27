@@ -22,5 +22,4 @@ def main():
 		#delay
 		print("Waiting", waitingTime, 'Seconds')
 		time.sleep(waitingTime)
-
 main()
