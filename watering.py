@@ -24,3 +24,5 @@ def shouldWater(moisture, mode=1):
 def water(s):
     ##code for watering here
     print("Watering neccesary, Watering now")
+    #led on GPIO pin 25
+    
