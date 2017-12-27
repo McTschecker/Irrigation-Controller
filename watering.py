@@ -41,7 +41,7 @@ def shouldWater(moisture, mode=1, test=False):
 
 
 def water(s):
-    from gpiozero import LED
+    #from gpiozero import LED
     ##code for watering here
     print("Watering neccesary, Watering now")
     #led on GPIO pin 25
