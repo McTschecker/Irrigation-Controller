@@ -10,6 +10,7 @@ ADD main.py /usr/src/app/
 ADD subsystems/ /usr/src/app/
 RUN chmod +x run.sh
 #get dependencies
+RUN apt-get update --fix-missing
 RUN apt-get -y update && apt-get -y upgrade && apt-get -y install python apt-utils
 #DHT 22 Libs
 RUN  apt-get install build-essential python-dev git wget python3-spidev python-spidev python-dev 
