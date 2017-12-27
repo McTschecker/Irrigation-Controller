@@ -1,4 +1,3 @@
-from gpiozero import LED
 import time
 moisMode1 = 0.5 ###example Values
 moisMode2 = 0.75  ####example Values
@@ -42,6 +41,7 @@ def shouldWater(moisture, mode=1, test=False):
 
 
 def water(s):
+    from gpiozero import LED
     ##code for watering here
     print("Watering neccesary, Watering now")
     #led on GPIO pin 25
