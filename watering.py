@@ -5,7 +5,7 @@ waterTime = 10
 def shouldWater(moisture, mode=1, test=False):
     if test:
         if mode==1:
-             if moisture>= moisMode1:
+            if moisture>= moisMode1:
                 print("Watering neccesary, Watering now")
                 return True
             else:
