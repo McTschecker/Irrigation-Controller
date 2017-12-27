@@ -22,7 +22,7 @@ def shouldWater(moisture, mode=1, test=False):
             raise exeption("Unknown Mode, please select an configured mode!")
     else:
         if mode==1:
-             if moisture>= moisMode1:
+            if moisture>= moisMode1:
                 water(waterTime)
                 return True
             else:
