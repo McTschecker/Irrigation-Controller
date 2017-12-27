@@ -6,7 +6,7 @@ language: python
 python:
 - '2.7'
 script:
-- coverage run testSubFunctions.py
+- coverage run preTestSubFunctions.py
 after_success:
 - codecov
 - eval "$(ssh-agent -s)"
