@@ -1,15 +1,4 @@
-from updatevalues import update
-import random
 from watering import shouldWater
-def testUpdateValues():
-    temperature = random.randint(0,500)
-    humidity = random.randint(0,100)
-    moisture = random.randint(0,10000)
-    write_key = "ENZIKF2E2KS08KD4"
-    channel_id = 386549
-    update(temperature, humidity, moisture, channel_id, write_key)
-    print("Succesfully put some values to thingspeak")
-
 def testWatering():
     #Test1 mode 1; value 0.6  ====> True
     test1 = shouldWater(0.6) 
@@ -38,6 +27,4 @@ def testWatering():
          raise Exception ("Test 1 failed for vlue of 0.0, should be false in mode 2", test2)
     else: 
         print("Test 4 passed for watering")
-#run the test for updates
-testUpdateValues()
-#testWatering()
+testWatering()
