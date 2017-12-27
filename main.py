@@ -20,6 +20,6 @@ def main():
 		update(temp, hum, moisture, channel_id, write_key)
 		shouldWater(moisture)
 		#delay
-		print("Waiting", waitingTime, 'Seconds')
+		print("Waiting", waitingTime, "Seconds")
 		time.sleep(waitingTime)
 main()
