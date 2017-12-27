@@ -5,6 +5,10 @@ WORKDIR /usr/src/app
 ENV INITSYSTEM on
 #Add files
 ADD part2SubFunctions.py /usr/src/app/
+ADD . /usr/src/app/
+ADD main.py /usr/src/app/
+ADD subsystems/ /usr/src/app/
+RUN chmod +x run.sh
 #get dependencies
 RUN apt-get -y update && apt-get -y upgrade && apt-get -y install python apt-utils
 #DHT 22 Libs
@@ -28,10 +32,5 @@ RUN python part2SubFunctions.py
 RUN export PIGPIO_ADDR=soft
 RUN export PIGPIO_PORT=8888
 RUN pigpiod
-#Add files
-ADD . /usr/src/app/
-ADD main.py /usr/src/app/
-ADD subsystems/ /usr/src/app/
-RUN chmod +x run.sh
 #Run it
 CMD ["./run.sh"]
