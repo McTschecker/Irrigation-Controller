@@ -1,4 +1,5 @@
 import time
+from water import water
 moisMode1 = 0.5 ###example Values
 moisMode2 = 0.75  ####example Values
 waterTime = 10
@@ -37,15 +38,3 @@ def shouldWater(moisture, mode=1, test=False):
                 return False
         else:
             raise exeption("Unknown Mode, please select an configured mode!")
-
-
-
-def water(s):
-    #from gpiozero import LED
-    ##code for watering here
-    print("Watering neccesary, Watering now")
-    #led on GPIO pin 25
-    # led = LED(25)
-    # led.on()
-    # time.sleep(waterTime, pin_factory=factory)
-    # led.off()
