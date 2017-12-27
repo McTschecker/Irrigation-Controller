@@ -20,8 +20,7 @@ RUN rm get-pip.py
 #install requirements.txt
 RUN pip install requests gpiozero statistics rpio pigpio RPi.Gpio
 #Test part 2
-RUN pip install codecov
-RUN codecov run part2SubFunctions.py
+RUN python part2SubFunctions.py
 #DHT22
 #RUN git clone https://github.com/adafruit/Adafruit_Python_DHT.git
 #RUN cd Adafruit_Python_DHT && python setup.py install --force-pi
