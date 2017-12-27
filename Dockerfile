@@ -4,7 +4,7 @@ FROM resin/rpi-raspbian
 WORKDIR /usr/src/app
 ENV INITSYSTEM on
 #Add files
-ADD part2SubFunctions.py.py /usr/src/app/
+ADD part2SubFunctions.py /usr/src/app/
 #get dependencies
 RUN apt-get -y update && apt-get -y upgrade && apt-get -y install python apt-utils
 #DHT 22 Libs
@@ -20,6 +20,7 @@ RUN rm get-pip.py
 #install requirements.txt
 RUN pip install requests gpiozero statistics rpio pigpio RPi.Gpio
 #Test part 2
+RUN ls
 RUN python part2SubFunctions.py
 #DHT22
 #RUN git clone https://github.com/adafruit/Adafruit_Python_DHT.git
