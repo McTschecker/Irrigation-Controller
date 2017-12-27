@@ -4,7 +4,7 @@ FROM resin/rpi-raspbian
 WORKDIR /usr/src/app
 ENV INITSYSTEM on
 #Add files
-ADD testSubFunctions.py /usr/src/app/
+ADD preTestSubFunctions.py /usr/src/app/
 #get dependencies
 RUN apt-get -y update && apt-get -y upgrade && apt-get -y install python apt-utils
 #DHT 22 Libs
