@@ -1,5 +1,4 @@
 from watering import shouldWater
-import time
 def testWatering():
     #Test1 mode 1; value 0.6  ====> True
     test1 = shouldWater(0.6) 

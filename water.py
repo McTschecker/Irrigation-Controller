@@ -5,5 +5,5 @@ def water(s):
     #led on GPIO pin 25
     led = LED(25)
     led.on()
-    time.sleep(s, pin_factory=factory)
+    time.sleep(s)
     led.off()
