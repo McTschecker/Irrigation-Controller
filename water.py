@@ -1,3 +1,4 @@
+import time
 def water(s):
     from gpiozero import LED
     ##code for watering here
