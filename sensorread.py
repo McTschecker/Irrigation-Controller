@@ -12,7 +12,7 @@ numOfReads = 10 # Numbers of sensor readings
 
 def readMoisture():
 	pot = MCP3008(0)
-	print(pot.value)
+	#print(pot.value)
 	moistureA = [pot.value]
 	for h in range(numOfReads):
 	#while True:
