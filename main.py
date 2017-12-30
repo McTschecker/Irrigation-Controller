@@ -7,19 +7,33 @@ import time
 from watering import shouldWater
 waitingTime = 6 #Time waiting in seconds
 #pigpio.start('soft', 8888)
+
+#####################################################################
+# Controls which functions are active
+tempHumActive = True
+moistureActive = True
+publishActive = True
+waterActive = True
+waitingActive = True
+
 channel_id = "337034"
 write_key  = "PDCMJ7FI8E3GRKS5"
 def main():
 	while True:
-		hum, temp = readDHT(2)
-		moisture = readMoisture()
 		print("#################################")
-		print("humidity is ", hum)
-		print("temperature is", temp)
-		print("moisture is", moisture)
-		update(temp, hum, moisture, channel_id, write_key)
-		shouldWater(moisture)
+		if(tempHumActive):
+			hum, temp = readDHT(2)
+			print("temperature is", temp)
+			print("humidity is ", hum)
+		if moistureActive:
+			moisture = readMoisture()
+			print("moisture is", moisture)
+		if publishActive:
+			update(temp, hum, moisture, channel_id, write_key)
+		if waterActive:
+			shouldWater(moisture)
 		#delay
-		print("Waiting", waitingTime, "Seconds")
-		time.sleep(waitingTime)
+		if waitingActive:
+			print("Waiting", waitingTime, "Seconds")
+			time.sleep(waitingTime)
 main()
