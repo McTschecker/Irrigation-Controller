@@ -25,15 +25,25 @@ def main():
 			hum, temp = readDHT(2)
 			print("temperature is", temp)
 			print("humidity is ", hum)
+		else:
+			print("Temperature and humidity sensor is disabled")
 		if moistureActive:
 			moisture = readMoisture()
 			print("moisture is", moisture)
+		else:
+			print("Moisture sensor is disabled")
 		if publishActive:
 			update(temp, hum, moisture, channel_id, write_key)
+		else:
+			print("Publishing to thingspeak is disabled")
 		if waterActive:
 			shouldWater(moisture)
+		else:
+			print("Watering is disabled")
 		#delay
 		if waitingActive:
 			print("Waiting", waitingTime, "Seconds")
 			time.sleep(waitingTime)
+		else:
+			print("Waiting is disabled")
 main()
