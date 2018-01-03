@@ -10,13 +10,14 @@ import statistics
 
 numOfReads = 10 # Numbers of sensor readings
 
+#read the moisture from a Yl-69 over a YL-38 with a MCP3008
 def readMoisture():
-	pot = MCP3008(0)
-	moistureA = [pot.value]
+	pot = MCP3008(0)#specify the MCP3008 port
+	moistureA = [pot.value]#read the first value
 	for h in range(numOfReads):
-		moistureA = moistureA +  [pot.value]
-	moisture = s.mean(moistureA)
-	print("average moisture", moisture)
+		moistureA = moistureA +  [pot.value] #add the reading value to the list of values
+	moisture = s.mean(moistureA) #calculate the mean of the list
+	print("average moisture", moisture) 
 	return moisture
 
 
