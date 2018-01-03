@@ -17,7 +17,6 @@ def readMoisture():
 	for h in range(numOfReads):
 		moistureA = moistureA +  [pot.value] #add the reading value to the list of values
 	moisture = s.mean(moistureA) #calculate the mean of the list
-	print("average moisture", moisture) 
 	return moisture
 
 
