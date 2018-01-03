@@ -1,7 +1,9 @@
+#import needed libs
 import time
 from water import water
-moisMode1 = 0.5 ###example Values
-moisMode2 = 0.75  ####example Values
+#define example values
+moisMode1 = 0.5
+moisMode2 = 0.5
 waterTime = 10
 def shouldWater(moisture, mode=1, test=False):
     if test:
@@ -10,7 +12,7 @@ def shouldWater(moisture, mode=1, test=False):
                 print("Watering neccesary, Watering now")
                 return True
             else:
-                print("Watering not neccesary") 
+                print("Watering not neccesary")
                 return False
         elif mode== 2:
             if moisture>= moisMode2:
@@ -23,11 +25,11 @@ def shouldWater(moisture, mode=1, test=False):
             raise exeption("Unknown Mode, please select an configured mode!")
     else:
         if mode==1:
-            if moisture>= moisMode1:
+            if moisture>= moisMode2:
                 water(waterTime)
                 return True
             else:
-                print("Watering not neccesary") 
+                print("Watering not neccesary")
                 return False
         elif mode== 2:
             if moisture>= moisMode2:
