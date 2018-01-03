@@ -2,6 +2,7 @@ sudo: required
 install:
 - pip install -r requirements.txt
 - pip install codecov
+- rm wiring.fzz
 language: python
 python:
 - '2.7'
@@ -14,5 +15,5 @@ after_success:
 - git remote add resin g_fabian_lukas_blank@git.resin.io:g_fabian_lukas_blank/control.git
 - git checkout master
 - git merge dev
-- git push -u origin master 
+- git push -u origin master
 - git push resin master
