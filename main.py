@@ -20,19 +20,21 @@ channel_id = "337034"
 write_key  = "PDCMJ7FI8E3GRKS5"
 def main():
 	while True: #run the following code all the time
-		print("#################################")
+		print("#################################") #making it easier to read the logs
+		#meassuring the temperature
 		if(tempHumActive):
 			hum, temp = readDHT(2)
 			print("temperature is", temp)
 			print("humidity is ", hum)
 		else:
 			print("Temperature and humidity sensor is disabled")
+		#read Moisture
 		if moistureActive:
 			moisture = readMoisture()
 			print("moisture is", moisture)
 		else:
 			print("Moisture sensor is disabled")
-		#Send all the Data to thingspeak	
+		#Send all the Data to thingspeak
 		if publishActive:
 			update(temp, hum, moisture, channel_id, write_key)
 		else:
