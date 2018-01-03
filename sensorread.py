@@ -17,18 +17,19 @@ def readMoisture():
 	for h in range(numOfReads):
 		moistureA = moistureA +  [pot.value] #add the reading value to the list of values
 	moisture = s.mean(moistureA) #calculate the mean of the list
-	return moisture
+	return moisture #return the value
 
 
 def readDHT (pin):
-	sensor = Adafruit_DHT.DHT22
-	humidity, temperature = Adafruit_DHT.read_retry(sensor, pin)
-	humidA = [humidity]
-	tempA = [temperature]
+	sensor = Adafruit_DHT.DHT22 #define the Sensor as a DHT22
+	humidity, temperature = Adafruit_DHT.read_retry(sensor, pin) #try to read the sensor
+	humidA = [humidity] #list for Humidity
+	tempA = [temperature] #list for temperature
 	for i in range(numOfReads):
-		humidity, temperature = Adafruit_DHT.read_retry(sensor, pin)
-		humidA = humidA + [humidity]
-		tempA = tempA + [temperature]
+		humidity, temperature = Adafruit_DHT.read_retry(sensor, pin) #try to read
+		humidA = humidA + [humidity] #add the most recent value to the humidity list
+		tempA = tempA + [temperature] #add the most recent value to the temperature list
+	#mean the values
 	humidity = statistics.mean(humidA)
 	temperature = statistics.mean(tempA)
-	return humidity, temperature
+	return humidity, temperature #return the values
