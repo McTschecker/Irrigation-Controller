@@ -1,18 +1,18 @@
 sudo: required
 install:
+  #install requirements for executing
 - pip install -r requirements.txt
+#install the code coverage
 - pip install codecov
 language: python
 python:
 - '2.7'
 script:
-- coverage run preTestSubFunctions.py
+- coverage run preTestSubFunctions.py #run code coverage
 after_success:
-- codecov
+- codecov #publish code coverage
+#publish to git over ssh
 - eval "$(ssh-agent -s)"
 - ssh -o "StrictHostKeyChecking no" g_fabian_lukas_blank@git.resin.io
 - git remote add resin g_fabian_lukas_blank@git.resin.io:g_fabian_lukas_blank/control.git
-- git checkout master
-- git merge dev
-- git push -u origin master
 - git push resin master

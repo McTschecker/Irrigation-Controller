@@ -19,7 +19,7 @@ waitingActive = True
 channel_id = "337034"
 write_key  = "PDCMJ7FI8E3GRKS5"
 def main():
-	while True:
+	while True: #run the following code all the time
 		print("#################################")
 		if(tempHumActive):
 			hum, temp = readDHT(2)
@@ -32,6 +32,7 @@ def main():
 			print("moisture is", moisture)
 		else:
 			print("Moisture sensor is disabled")
+		#Send all the Data to thingspeak	
 		if publishActive:
 			update(temp, hum, moisture, channel_id, write_key)
 		else:
