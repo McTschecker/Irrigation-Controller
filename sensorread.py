@@ -12,21 +12,16 @@ numOfReads = 10 # Numbers of sensor readings
 
 def readMoisture():
 	pot = MCP3008(0)
-	#print(pot.value)
 	moistureA = [pot.value]
 	for h in range(numOfReads):
-	#while True:
-		#print("soil moisture", pot.value)
 		moistureA = moistureA +  [pot.value]
 	moisture = s.mean(moistureA)
 	print("average moisture", moisture)
 	return moisture
 
 
-def readDHT (pin): 
-	#sensorargs = DHT TYPE
+def readDHT (pin):
 	sensor = Adafruit_DHT.DHT22
-
 	humidity, temperature = Adafruit_DHT.read_retry(sensor, pin)
 	humidA = [humidity]
 	tempA = [temperature]
@@ -37,4 +32,3 @@ def readDHT (pin):
 	humidity = statistics.mean(humidA)
 	temperature = statistics.mean(tempA)
 	return humidity, temperature
-
