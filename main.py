@@ -14,7 +14,7 @@ tempHumActive = True
 moistureActive = True
 publishActive = True
 waterActive = True
-waitingActive = True
+waitingActive = False
 
 channel_id = "337034"
 write_key  = "PDCMJ7FI8E3GRKS5"
