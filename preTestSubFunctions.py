@@ -1,6 +1,5 @@
 from updatevalues import update
 import random
-from watering import shouldWater
 def testUpdateValues():
     #create random values
     temperature = random.randint(0,500)
