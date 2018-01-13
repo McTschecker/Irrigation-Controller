@@ -5,7 +5,7 @@ from updatevalues import update
 import pigpio
 import time
 from watering import shouldWater
-waitingTime = 60 #Time waiting in seconds
+waitingTime = 6 #Time waiting in seconds
 #pigpio.start('soft', 8888)
 
 #####################################################################
