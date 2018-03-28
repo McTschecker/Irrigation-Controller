@@ -31,8 +31,8 @@ def main():
 			print("humidity is ", hum)
 		else:
 			print("Temperature and humidity sensor is disabled")
-			temp = 0
-			hum = 0
+			temp = 19
+			hum = 85
 		#read Moisture
 		if moistureActive:
 			moisture = readMoisture()
