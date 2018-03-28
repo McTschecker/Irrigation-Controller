@@ -1,6 +1,6 @@
 #!/bin/bash
 #install DHT lib
-pip install Adafruit_Python_DHT:1.1
+pip install Adafruit_Python_DHT
 #run tests for watering
 python part2SubFunctions.py
 #execute script

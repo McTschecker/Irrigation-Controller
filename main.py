@@ -10,7 +10,7 @@ waitingTime = 1440 #Time waiting in seconds
 
 #####################################################################
 # Controls which functions are active
-tempHumActive = False
+tempHumActive = True
 moistureActive = True
 publishActive = True
 waterActive = True
