@@ -19,6 +19,7 @@ waitingActive = False
 channel_id = "337034"
 write_key  = "PDCMJ7FI8E3GRKS5"
 temp = 0
+hum = 0
 def main():
 	while True: #run the following code all the time
 		print("#################################") #making it easier to read the logs
